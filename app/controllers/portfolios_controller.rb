@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+
   def index
     @portfolio_items = Portfolio.all
   end
@@ -20,11 +22,9 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def update
-    @portfolio_item = Portfolio.find(params[:id])
     if @portfolio_item.update(portfolio_params)
       redirect_to portfolios_path
     else
@@ -33,17 +33,18 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def destroy
-     @portfolio_item = Portfolio.find(params[:id])
      @portfolio_item.destroy
      redirect_to portfolios_url
   end
 
   private
-    # Never trust parameters from the scary internet, only allow the white list through.
+    def set_portfolio
+      @portfolio_item = Portfolio.friendly.find(params[:id])
+    end
+
     def portfolio_params
       params.require(:portfolio).permit(:title, :subtitle, :body)
     end
