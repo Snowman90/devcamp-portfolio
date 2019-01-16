@@ -60,3 +60,4 @@ gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
 
 gem 'wk_view_tool', git: "https://github.com/Snowman90/wk_view_tool"
+
