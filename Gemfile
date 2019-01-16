@@ -61,3 +61,4 @@ gem 'jquery-rails'
 
 gem 'wk_view_tool', git: "https://github.com/Snowman90/wk_view_tool"
 
+gem 'petergate', '~> 2.0', '>= 2.0.1'
