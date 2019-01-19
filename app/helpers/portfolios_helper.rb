@@ -5,7 +5,7 @@ module PortfoliosHelper
 
   def portfolio_img img, type
     if img.model.main_image? || img.model.thumb_image?
-      img
+      img.to_s
     elsif type == "thumb"
       image_generator(height: '350', width: '200').to_s
     elsif type == "main"
@@ -13,8 +13,5 @@ module PortfoliosHelper
     end
   end
 
-  def tescik
-
-  end
 end
 

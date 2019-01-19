@@ -75,3 +75,5 @@ gem 'carrierwave-aws'
 gem 'dotenv-rails'
 
 gem 'cloudinary', '~> 1.9', '>= 1.9.1'
+
+gem "cocoon"
