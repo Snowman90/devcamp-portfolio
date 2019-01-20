@@ -77,3 +77,5 @@ gem 'dotenv-rails'
 gem 'cloudinary', '~> 1.9', '>= 1.9.1'
 
 gem "cocoon"
+
+gem "gritter", "1.2.0"
