@@ -81,3 +81,5 @@ gem "cocoon"
 gem "gritter", "1.2.0"
 
 gem 'twitter', '~> 6.2'
+
+gem 'redis', '~> 3.3', '>= 3.3.1'
